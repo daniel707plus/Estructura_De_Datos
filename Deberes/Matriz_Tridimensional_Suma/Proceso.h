@@ -1,0 +1,29 @@
+/***********************************************************************
+ * Module:  Proceso.h
+ * Author:  Joshep Chisaguano
+ * Modified: sabado, 2 de mayo de 2026 19:32:32
+ * Purpose: Declaration of the class Proceso
+ ***********************************************************************/
+#ifndef PROCESO_H
+#define PROCESO_H
+
+#include "Matriz.h"
+#include <iostream>
+
+using namespace std;
+
+
+template <typename T>
+Matriz<T> operator+(const Matriz<T>& a, const Matriz<T>& b); ;
+
+class Proceso {
+public:
+    template <typename T>
+    void ingresar(Matriz<T>& matriz, const char* nombreMatriz);
+
+    template <typename T>
+    void imprimir(const Matriz<T>& matriz, const char* nombreMatriz);
+};
+
+#include "Proceso.cpp"
+#endif
